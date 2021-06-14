@@ -11,9 +11,14 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'Home',
-  mounted(){
+  data(){
+    return {
 
+    }
   },
+  // mounted() {
+		
+	// },
   methods:{
     Login(){
       this.$router.push('Login');

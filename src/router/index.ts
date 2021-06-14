@@ -22,12 +22,11 @@ const router = new VueRouter({
   routes
 })
 router.beforeEach((to,from,next)=>{
-  if(to.name = 'Login' || localStorage.getItem('token')){
-
+  if(to.fullPath == '/Login' || to.fullPath == '/' || localStorage.getItem('token')){
+    next();
   }else{
     router.push('Login');
   }
-  next();
 })
 
 export default router
